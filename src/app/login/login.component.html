@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col col-sm-8">
+        <div class="jumbotron login-body">
+            <form class="form-group" (ngSubmit) = "login(frm.value)" #frm = "ngForm">
+                <div class="col col-sm-12">
+                  <input type="text" name="username" id="username" ngModel class="form-control" placeholder="Username" required>
+                </div>
+                    <br>
+                <div class="col col-sm-12">
+                  <input type="password" name="password" id="password" ngModel class="form-control" placeholder="Password" required min="6">
+                </div>
+                    <br>
+                <div class="col col-sm-12">
+                   <button type="submit" class="btn btn-danger" [disabled] = "!frm.valid"> Login </button>
+                </div>
+              </form>
+        </div>
+    </div>
+  </div>
+</div>
